@@ -112,3 +112,5 @@ Pipfile.lock
 
 # Pre-commit
 .pre-commit-config.yaml
+
+report
