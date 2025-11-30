@@ -1,4 +1,24 @@
-# uv 简单上手指南
+# uv项目使用指南
+
+在讲uv前，我们先回顾一下常规的python项目管理是怎样的，拿到一个项目，我们需要用如下命令：
+
+```shell
+python -m venv .venv
+```
+
+```shell
+source .venv/bin/activate
+```
+
+```shell
+vim pyproject.toml
+```
+
+```shell
+pip install -e .
+```
+
+然而，现在有了uv，都不需要了，只需要一句`uv add ...`或`uv sync`就可以完成。
 
 > `uv` 是近年来新兴的一款 **轻量级、高性能、现代化的 Python 包和虚拟环境管理工具**，它的目标是部分替代 `pip`、`virtualenv`、`pip-tools`、`poetry`、`pipenv` 这类工具，提升开发者的日常体验。
 >
@@ -47,11 +67,11 @@ uv --version
 
 ![image-20250611202707532](https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/202506112027565.png)
 
-好家伙，直接集成了Git
+好家伙，连Git仓库都帮我们创建好了
 
 ![image-20250611202932378](https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/202506112029417.png)
 
-## 三、快速搭建 python 项目环境
+## 三、用uv搭建环境
 
 ### 查看可用python版本
 
@@ -74,7 +94,7 @@ uv python install [python_version]
 新项目的目录下会生成 `pyproject.toml`、`.python-version` 文件。
 
 ```shell
-uv init (项目名)
+uv init [项目名]
 ```
 
 ![image-20250611203518214](https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/202506112035253.png)
@@ -119,9 +139,9 @@ uv remove [module]
 
 ![image-20250611203939503](https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/202506112039541.png)
 
-## 四、管理和运行 python 项目
+## 四、用uv运行项目
 
-### 运行项目或脚本
+### 临时运行项目或脚本
 
 可以在不显式激活虚拟环境的情况下，在项目的虚拟环境中执行任何命令或脚本。
 
